@@ -1,0 +1,183 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5ede4;
+  --foreground: #2b1202;
+  --card: #ffffff;
+  --card-foreground: #2b1202;
+  --popover: #ffffff;
+  --popover-foreground: #2b1202;
+  --primary: #b28d60;
+  --primary-foreground: #ffffff;
+  --secondary: #e8ddd0;
+  --secondary-foreground: #2b1202;
+  --muted: #ccb69f;
+  --muted-foreground: #5a3210;
+  --accent: #764116;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #fef2f2;
+  --border: #d4c4b0;
+  --input: #ffffff;
+  --ring: #b28d60;
+  --radius: 1rem;
+  --gold: #b28d60;
+  --brown-intense: #764116;
+  --beige: #ccb69f;
+  --beige-light: #e8ddd0;
+  --dark-brown: #2b1202;
+  --cream: #f5ede4;
+  --gold-light: #d4b896;
+  --gold-dark: #96744d;
+  --brown-light: #a16b3d;
+  --brown-medium: #5a3210;
+  --header-bg: #3d1f0d;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: #e8ddd0;
+  --sidebar-foreground: #2b1202;
+  --sidebar-primary: #b28d60;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ccb69f;
+  --sidebar-accent-foreground: #2b1202;
+  --sidebar-border: #d4c4b0;
+  --sidebar-ring: #b28d60;
+}
+
+.dark {
+  --background: #15080a;
+  --foreground: #f0e8df;
+  --card: #1f0f10;
+  --card-foreground: #f0e8df;
+  --popover: #1f0f10;
+  --popover-foreground: #f0e8df;
+  --primary: #d4b896;
+  --primary-foreground: #15080a;
+  --secondary: #2a1518;
+  --secondary-foreground: #f0e8df;
+  --muted: #1a0c0e;
+  --muted-foreground: #b8a48c;
+  --accent: #b28d60;
+  --accent-foreground: #15080a;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.95 0.05 25);
+  --border: #3a1f22;
+  --input: #2a1518;
+  --ring: #d4b896;
+  /* Brand tokens overridden so legacy class names (text-dark-brown, bg-beige-light, etc.) follow the dark theme */
+  --gold: #d4b896;
+  --gold-light: #e6cfae;
+  --gold-dark: #a8895f;
+  --brown-intense: #6b3a1c;
+  --brown-light: #8a5230;
+  --brown-medium: #4a2510;
+  --beige: #2a1518;
+  --beige-light: #1f0f10;
+  --dark-brown: #f0e8df;
+  --cream: #15080a;
+  --header-bg: #0d0405;
+  --sidebar: #1f0f10;
+  --sidebar-foreground: #f0e8df;
+  --sidebar-primary: #d4b896;
+  --sidebar-primary-foreground: #15080a;
+  --sidebar-accent: #2a1518;
+  --sidebar-accent-foreground: #f0e8df;
+  --sidebar-border: #3a1f22;
+  --sidebar-ring: #d4b896;
+}
+
+@theme inline {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-brown-intense: var(--brown-intense);
+  --color-brown-light: var(--brown-light);
+  --color-brown-medium: var(--brown-medium);
+  --color-beige: var(--beige);
+  --color-beige-light: var(--beige-light);
+  --color-dark-brown: var(--dark-brown);
+  --color-cream: var(--cream);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--beige-light); }
+::-webkit-scrollbar-thumb { background: var(--brown-intense); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--dark-brown); }
+
+.safe-area-pb { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.animate-fade-in { animation: fadeIn 0.3s ease-out; }
+.animate-slide-up { animation: slideUp 0.4s ease-out; }
+
+@media (hover: none) {
+  button, a { -webkit-tap-highlight-color: rgba(178, 141, 96, 0.2); }
+}
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar { display: none; }
+  * { scrollbar-width: none; }
+}
